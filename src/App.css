@@ -1,0 +1,142 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  background-color: #677583; 
+  color: white; 
+  padding: 20px;
+  text-align: center; 
+}
+
+
+.machine-status {
+  margin: 20px 0;
+}
+
+.machines-container {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.machine-card {
+  flex: 1 0 calc(30% - 20px); 
+  margin: 10px; 
+  padding: 15px; 
+  background: white; 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  transition: transform 0.2s; 
+}
+
+.machine-card:hover {
+  transform: scale(1.05); 
+}
+
+
+.in_cycle {
+  color: green; 
+}
+
+.blocked {
+  color: orange; 
+}
+
+.electrical_fault {
+  color: red; 
+}
+
+
+.recent-issues {
+  margin: 20px 0; 
+  padding: 20px; 
+  background: #fff; 
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.recent-issues h2 {
+  font-size: 24px; 
+  margin-bottom: 15px;
+}
+
+.recent-issues ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.recent-issues li {
+  margin: 15px 0; 
+  padding: 15px; 
+  background: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.recent-issues li p {
+  margin: 5px 0; 
+  font-size: 18px; 
+}
+
+.recent-issues li strong {
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .dashboard-header {
+      padding: 15px; 
+  }
+
+  .machine-card {
+      flex: 1 0 calc(45% - 20px); 
+  }
+
+  .recent-issues {
+      padding: 15px; 
+  }
+}
+
+.recent-issues li.op1 {
+  background-color: rgba(0, 128, 0, 0.1); 
+}
+
+.recent-issues li.op2 {
+  background-color: rgba(255, 165, 0, 0.1); 
+}
+
+.recent-issues li.op3 {
+  background-color: rgba(255, 0, 0, 0.1); 
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+      font-size: 20px; 
+  }
+
+  .dashboard-header p {
+      font-size: 14px; 
+  }
+
+  .machine-card {
+      flex: 1 0 100%;
+  }
+
+  .recent-issues {
+      padding: 10px; 
+  }
+}
