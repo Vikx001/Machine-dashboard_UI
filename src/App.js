@@ -9,8 +9,8 @@ const App = () => {
     ];
 
     const recentIssues = [
-      { description: 'Machine OP1 has been starved', startTime: '09:07 AM', endTime: '09:15 AM', machineID: 'OP1' },
-      { description: 'Machine OP2 is blocked', startTime: '09:32 AM', endTime: '09:50 AM', machineID: 'OP2' },
+      { description: 'Machine OP1 has been starved', startTime: '06:07 AM', endTime: '07:15 AM', machineID: 'OP1' },
+      { description: 'Machine OP2 is blocked', startTime: '10:32 AM', endTime: '10:50 AM', machineID: 'OP2' },
       { description: 'Machine OP3 stopped due to electrical fault', startTime: '10:03 AM', endTime: '10:08 AM', machineID: 'OP3' }, 
     ];
 
@@ -38,7 +38,8 @@ const App = () => {
                 <p>Current Shift: {currentShift}</p>
                 <p>Date/Time: {currentDateTime}</p>
             </header>
-
+'
+'
             <section className="machine-status">
                 <h2>Machine Status</h2>
                 <div className="machines-container">
