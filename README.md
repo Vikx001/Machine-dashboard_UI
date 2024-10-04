@@ -12,7 +12,7 @@ This project is a web-based dashboard for monitoring the status of an assembly l
 ## Technologies Used
 
 - **Frontend:** React.js, HTML, CSS
-- **Backend Simulation:** Simulated data fetching and status updates
+- **Backend Simulation:** Simulated data fetching and status updates ( just showing hardcoded data )
 
 ## Installation
 
