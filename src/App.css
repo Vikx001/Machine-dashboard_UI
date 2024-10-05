@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -19,7 +18,6 @@ body {
   padding: 20px;
   text-align: center; 
 }
-
 
 .machine-status {
   margin: 20px 0;
@@ -46,7 +44,6 @@ body {
   transform: scale(1.05); 
 }
 
-
 .in_cycle {
   color: green; 
 }
@@ -58,7 +55,6 @@ body {
 .electrical_fault {
   color: red; 
 }
-
 
 .recent-issues {
   margin: 20px 0; 
@@ -73,12 +69,23 @@ body {
   margin-bottom: 15px;
 }
 
+.issue-headers {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px; /* Add space between Start Time and End Time headers */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .recent-issues ul {
   list-style-type: none; 
   padding: 0; 
 }
 
 .recent-issues li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 15px 0; 
   padding: 15px; 
   background: #f9f9f9; 
@@ -87,15 +94,26 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-.recent-issues li p {
-  margin: 5px 0; 
-  font-size: 18px; 
+.issue-details {
+  flex: 1;
 }
 
-.recent-issues li strong {
-  font-weight: bold;
+.issue-time {
+  display: flex;
+  gap: 50px;
 }
 
+.recent-issues li.op1 {
+  background-color: rgba(0, 128, 0, 0.1); 
+}
+
+.recent-issues li.op2 {
+  background-color: rgba(255, 165, 0, 0.1); 
+}
+
+.recent-issues li.op3 {
+  background-color: rgba(255, 0, 0, 0.1); 
+}
 
 @media (max-width: 768px) {
   .dashboard-header {
@@ -109,18 +127,14 @@ body {
   .recent-issues {
       padding: 15px; 
   }
-}
 
-.recent-issues li.op1 {
-  background-color: rgba(0, 128, 0, 0.1); 
-}
+  .issue-time {
+    gap: 20px;
+  }
 
-.recent-issues li.op2 {
-  background-color: rgba(255, 165, 0, 0.1); 
-}
-
-.recent-issues li.op3 {
-  background-color: rgba(255, 0, 0, 0.1); 
+  .issue-headers {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -138,5 +152,15 @@ body {
 
   .recent-issues {
       padding: 10px; 
+  }
+
+  .issue-time {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .issue-headers {
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
