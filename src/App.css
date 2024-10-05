@@ -72,7 +72,7 @@ body {
 .issue-headers {
   display: flex;
   justify-content: flex-end;
-  gap: 50px; /* Add space between Start Time and End Time headers */
+  gap: 50px; 
   font-weight: bold;
   margin-bottom: 10px;
 }
